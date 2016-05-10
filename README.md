@@ -54,3 +54,7 @@ Quake 2 license: GPL
 
 Q2 sources that can be compiled with VS 2015: https://github.com/rlabrecque/Quake-2<br>
 Useful information: http://fabiensanglard.net/quake2/
+
+## See also another port
+
+https://github.com/barrettcolin/Urho3D/tree/quake2
