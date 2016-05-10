@@ -11,6 +11,8 @@ Path to sources should be without spaces.<br>
 Cmake without AngelScript.<br>
 Build QuakeToon project.
 
+**Compiled version is already in the folder Bin.**
+
 ## Launching
 Unpack pak0.pak to Data/baseq2 (Pak Explorer http://www.quaketerminus.com/tools.shtml).<br>
 Batch convert *.pcx to *.png and place to Extra (Wally 1.55b http://www.quaketerminus.com/tools.shtml)<br>
