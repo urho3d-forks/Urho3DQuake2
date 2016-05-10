@@ -6,7 +6,8 @@ U3D+Q2 code https://github.com/1vanK/Urho3DQuake2/tree/master/Source/ThunderBeas
 
 ## Building
 Path to sources should be without spaces.<br>
-Cmake without AngelScript and with OpenGL.
+Cmake without AngelScript.<br>
+Build QuakeToon project.
 
 ## Launching
 Unpack pak0.pak to Data/baseq2 (Pak Explorer http://www.quaketerminus.com/tools.shtml).<br>
@@ -38,7 +39,10 @@ Result structure:<br>
   QuakeToon.exe
 ```
 
-You can also use hi-res textures from http://deponie.yamagi.org/quake2/texturepack/ but you need change https://github.com/1vanK/Urho3DQuake2/blob/master/Source/ThunderBeast/QuakeToon/TBE/Refresh/TBEImage.cpp#L173
+## Simple launching
+Copy pak0.pak to Data/baseq2.<br>
+Download hi-res textures from http://deponie.yamagi.org/quake2/texturepack/ and place to Extra folder. But some textures will be missing.<br>
+You can place to Extra folder both low-res and hi-res textures. First the game tries to load hi-res textures: https://github.com/1vanK/Urho3DQuake2/blob/master/Source/ThunderBeast/QuakeToon/TBE/Refresh/TBEImage.cpp#L173
 
 ## Another info
 Urho3D license: MIT<br>

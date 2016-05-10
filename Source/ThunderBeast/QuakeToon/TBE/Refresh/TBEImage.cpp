@@ -179,20 +179,33 @@ image_t	*GL_FindImage (char *name, imagetype_t type)
         String extension;
         SplitPath(name, pathName, fileName, extension);
 
+        ResourceCache* cache = TBESystem::GetEngine()->GetSubsystem<ResourceCache>();
+
         String textureName = "Textures/" + fileName + ".tga";
+        Texture2D* texture = 0;
 
         if (extension == ".pcx")
         {
-            textureName = pathName + fileName + ".png";
+            textureName = pathName + fileName + ".jpg";
+            texture = cache->GetResource<Texture2D>(textureName);
+
+            if (!texture)
+            {
+                textureName = pathName + fileName + ".png";
+                texture = cache->GetResource<Texture2D>(textureName);
+            }
         }
         else if (extension == ".wal")
         {
-            textureName = pathName + fileName + ".jpg";
+            textureName = pathName + fileName + ".tga";
+            texture = cache->GetResource<Texture2D>(textureName);
+            
+            if (!texture)
+            {
+                textureName = pathName + fileName + ".jpg";
+                texture = cache->GetResource<Texture2D>(textureName);
+            }
         }
-
-        ResourceCache* cache = TBESystem::GetEngine()->GetSubsystem<ResourceCache>();
-
-        Texture2D* texture = cache->GetResource<Texture2D>(textureName);
 
         if (!texture)
         {
