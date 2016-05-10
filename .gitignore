@@ -6,6 +6,8 @@ Build/
 Bin/*
 !Bin/**/
 !Bin/*.bat
+!Bin/*.exe
+!Bin/*.dll
 !Bin/*.sh
 Bin/*.app/
 Bin/*.app.dSYM/
